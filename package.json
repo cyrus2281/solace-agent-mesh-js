@@ -1,15 +1,26 @@
 {
-  "name": "sam-js-sdk",
+  "name": "sam-js",
   "version": "0.1.0",
   "description": "Javascript SDK to create agents for solace-agent-mesh",
   "author": {
     "name": "Cyrus Mobini"
   },
-  "main": "./src/Agent.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags",
+    "publish:npm": "npm publish --access public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "sam-js": "file:sam-js-0.1.0.tgz",
     "solclientjs": "^10.17.0"
   },
   "repository": {
@@ -20,6 +31,14 @@
   "license": "Apache-2.0 license",
   "devDependencies": {
     "@types/node": "^22.13.10",
-    "ts-node": "^10.9.2"
-  }
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "solace",
+    "agent",
+    "mesh",
+    "sdk",
+    "messaging"
+  ]
 }

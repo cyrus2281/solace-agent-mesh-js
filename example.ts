@@ -1,4 +1,5 @@
-import { Agent, Action } from "./src";
+// npm install sam-js
+import { Agent, Action } from "sam-js";
 
 const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
 

@@ -1,0 +1,30 @@
+# Development files
+src/
+tests/
+examples/
+docs/dev/
+
+# Configuration files
+.github/
+.vscode/
+.env*
+.eslintrc*
+.prettierrc*
+tsconfig.json
+jest.config.js
+
+# Build tools
+node_modules/
+coverage/
+.nyc_output/
+
+# Logs and temp files
+*.log
+temp/
+tmp/
+.DS_Store
+
+# Custom files to ignore
+workspace.code-workspace
+TODO.md
+CHANGELOG.draft.md

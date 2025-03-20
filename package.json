@@ -1,6 +1,6 @@
 {
   "name": "solace-agent-mesh-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Javascript SDK to create agents for solace-agent-mesh",
   "author": {
     "name": "Cyrus Mobini"

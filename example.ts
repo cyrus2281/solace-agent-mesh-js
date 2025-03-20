@@ -1,5 +1,5 @@
 // npm install sam-js
-import { Agent, Action } from "sam-js";
+import { Agent, Action } from "solace-agent-mesh-js";
 
 const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
 

@@ -20,6 +20,8 @@ Supported Features:
 
 This agent provides weather information using the weatherapi.com API.
 
+Check [example.ts](./example.ts) for the full code.
+
 ## Setup
 
 1. Clone this repository

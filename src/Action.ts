@@ -4,9 +4,11 @@ import {
   ActionCallbackMeta,
   ActionResponse,
 } from "./interfaces";
+import Agent from "./Agent";
 
 class Action {
   name: string;
+  private agent!: Agent;
 
   constructor(private config: ActionConfig, private action: ActionCallback) {
     this.name = config.name;
@@ -37,6 +39,15 @@ class Action {
     };
     return summary;
   }
+
+  setAgent(agent: Agent) {
+    this.agent = agent;
+  }
+
+  getAgent() {
+    return this.agent;
+  }
 }
+
 
 export default Action;

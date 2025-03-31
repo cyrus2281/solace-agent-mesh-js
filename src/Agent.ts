@@ -154,6 +154,11 @@ class Agent {
 
   addAction(action: Action) {
     this.actions.push(action);
+    action.setAgent(this);
+  }
+
+  addActions(...actions: Action[]) {
+    actions.forEach((action) => this.addAction(action));
   }
 
   getAgentSummary() {
@@ -176,6 +181,14 @@ class Agent {
   stop() {
     if (this._registrationInterval) clearInterval(this._registrationInterval);
     this.broker.disconnect();
+  }
+
+  doLlmRequest() {
+    console.error("Not implemented yet.");
+  }
+
+  doEmbeddingRequest() {
+    console.error("Not implemented yet.");
   }
 }
 
